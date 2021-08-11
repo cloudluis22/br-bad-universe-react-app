@@ -2,15 +2,16 @@
 
 @mixin main-background-properties($color) {
   background-color: $color;
-  height: 100vh;
+  background-size: cover;
+  height: auto;
+  min-height: 100vh;
   transition: 0.2s ease-in-out;
   width: 100vw;
 }
 
-@mixin text-initial-config($f-size) {
+@mixin text-initial-config {
   color: white;
   font-family: Helvetica, sans-serif;
-  font-size: $f-size;
   font-weight: bolder;
   text-align: center;
 }
@@ -30,12 +31,14 @@
 }
 
 .title {
-  @include text-initial-config(5rem);
+  @include text-initial-config;
+  font-size: clamp(30px, 5vw, 60px);
   padding-top: 15px;
 }
 
 .subtitle {
-  @include text-initial-config(3rem);
+  @include text-initial-config;
+  font-size: clamp(25px, 3vw, 60px);
   padding-top: 15px;
 }
 
@@ -49,9 +52,9 @@
 
 .main-img {
   border-radius: 50%;
-  height: 48vh;
-  max-width: 100%;
-
+  height: clamp(250px, 48vh, 500px);
+  max-width: clamp(25%, 95%, 100%);
+  object-fit: cover;
   transition: all 0.3s ease;
 
   &:hover {
@@ -61,5 +64,21 @@
 
   &:hover ~ .show-title {
     color: lightgrey;
+  }
+}
+
+@media only screen and (max-width: 1083px) {
+  .main-container {
+    flex-direction: column;
+    margin-top: 15px;
+    padding-bottom: 25px;
+  }
+
+  .main-img {
+    padding: 25px 25px 25px;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }
