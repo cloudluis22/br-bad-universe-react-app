@@ -43,7 +43,7 @@ export const MainScreen = () => {
           <img
             src={brbaImg}
             alt='Breaking Bad'
-            className='main-img animate__animated'
+            className='main-img animate__animated animate__fadeIn'
             onMouseEnter={changeBackground}
             onMouseLeave={resetBackground}
           />
@@ -53,7 +53,7 @@ export const MainScreen = () => {
           <img
             src={bcsImg}
             alt='Better Call Saul'
-            className='main-img animate__animated'
+            className='main-img animate__animated animate__fadeIn'
             onMouseEnter={changeBackground}
             onMouseLeave={resetBackground}
           />
