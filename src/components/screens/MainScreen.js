@@ -13,13 +13,13 @@ export const MainScreen = () => {
 
       <main className='main-container'>
         <div>
-          <img src={brbaImg} alt='Breaking Bad' />
-          <p> Breaking Bad </p>
+          <img src={brbaImg} alt='Breaking Bad' className='main-img' />
+          <p className='show-title'> Breaking Bad </p>
         </div>
 
         <div>
-          <img src={bcsImg} alt='Better Call Saul' />
-          <p> Better Call Saul </p>
+          <img src={bcsImg} alt='Better Call Saul' className='main-img' />
+          <p className='show-title'> Better Call Saul </p>
         </div>
       </main>
     </div>
