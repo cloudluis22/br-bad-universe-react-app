@@ -30,10 +30,10 @@ export const MainScreen = () => {
   return (
     <div className={currentColor}>
       <header>
-        <h1 className='title animate__animated animate__slideInDown'>
+        <h1 className='title animate__animated animate__fadeInUp'>
           The Breaking Bad Universe
         </h1>
-        <h2 className='subtitle animate__animated animate__slideInDown'>
+        <h2 className='subtitle animate__animated animate__fadeInUp'>
           Choose a show.
         </h2>
       </header>

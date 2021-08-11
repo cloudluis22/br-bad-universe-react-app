@@ -7,6 +7,13 @@
   width: 100vw;
 }
 
+@mixin main-text {
+  color: white;
+  font-family: Helvetica, sans-serif;
+  font-weight: bolder;
+  text-align: center;
+}
+
 .background-light-green {
   @include main-background-properties(
     lighten($color: v.$brba-green, $amount: 13)
@@ -21,13 +28,6 @@
   @include main-background-properties(darken($color: v.$bcs-red, $amount: 10));
 }
 
-@mixin main-text {
-  color: white;
-  font-family: Helvetica, sans-serif;
-  font-weight: bolder;
-  text-align: center;
-}
-
 .title {
   @include main-text;
   font-size: 5rem;
@@ -37,6 +37,7 @@
 .subtitle {
   @include main-text;
   font-size: 3rem;
+  padding-top: 15px;
 }
 
 .main-container {
@@ -44,7 +45,7 @@
   column-gap: 10%;
   display: flex;
   justify-content: center;
-  margin-top: 5%;
+  margin-top: 3%;
 }
 
 .main-img {
