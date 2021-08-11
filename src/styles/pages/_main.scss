@@ -1,10 +1,10 @@
 @use '../abstracts/variables.scss' as v;
 
 @mixin main-background-properties($color) {
-  height: 100vh;
-  width: 100vw;
-  transition: 0.2s ease-in-out;
   background-color: $color;
+  height: 100vh;
+  transition: 0.2s ease-in-out;
+  width: 100vw;
 }
 
 .background-light-green {
@@ -30,8 +30,8 @@
 
 .title {
   @include main-text;
-  padding-top: 15px;
   font-size: 5rem;
+  padding-top: 15px;
 }
 
 .subtitle {
@@ -41,16 +41,16 @@
 
 .main-container {
   align-items: center;
+  column-gap: 10%;
   display: flex;
   justify-content: center;
   margin-top: 5%;
-  column-gap: 10%;
 }
 
 .main-img {
   border-radius: 50%;
-  max-width: 100%;
   height: 48vh;
+  max-width: 100%;
 
   transition: all 0.3s ease;
 
