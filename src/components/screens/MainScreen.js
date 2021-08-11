@@ -4,30 +4,26 @@ import brbaImg from '../../images/brba-main-screen.jpg';
 import bcsImg from '../../images/bcs-main-screen.jpg';
 
 export const MainScreen = () => {
-  let backgroundClass = '';
-
   const [currentColor, setCurrentColor] = useState('background-light-green');
 
   const changeBackground = ({ target }) => {
     switch (target.alt) {
       case 'Breaking Bad':
-        backgroundClass = 'background-brba-green';
+        setCurrentColor('background-brba-green');
         break;
 
       case 'Better Call Saul':
-        backgroundClass = 'background-bcs-red';
-        break;
-
-      default:
-        backgroundClass = 'background-light-green';
+        setCurrentColor('background-bcs-red');
         break;
     }
+  };
 
-    console.log(backgroundClass);
+  const resetBackground = () => {
+    setCurrentColor('background-light-green');
   };
 
   return (
-    <div className='background-light-green'>
+    <div className={currentColor}>
       <header>
         <h1 className='title'> The Breaking Bad Universe </h1>
         <h2 className='subtitle'> Choose a show. </h2>
@@ -40,6 +36,7 @@ export const MainScreen = () => {
             alt='Breaking Bad'
             className='main-img'
             onMouseEnter={changeBackground}
+            onMouseLeave={resetBackground}
           />
           <p className='show-title'> Breaking Bad </p>
         </div>
@@ -50,6 +47,7 @@ export const MainScreen = () => {
             alt='Better Call Saul'
             className='main-img'
             onMouseEnter={changeBackground}
+            onMouseLeave={resetBackground}
           />
           <p className='show-title'> Better Call Saul </p>
         </div>

@@ -18,7 +18,7 @@
 
 .background-bcs-red {
   @include main-background-properties;
-  background-color: v.$bcs-red;
+  background-color: darken($color: v.$bcs-red, $amount: 10);
 }
 
 @mixin main-text {
