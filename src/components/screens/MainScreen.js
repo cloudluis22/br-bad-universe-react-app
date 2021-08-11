@@ -30,8 +30,12 @@ export const MainScreen = () => {
   return (
     <div className={currentColor}>
       <header>
-        <h1 className='title'> The Breaking Bad Universe </h1>
-        <h2 className='subtitle'> Choose a show. </h2>
+        <h1 className='title animate__animated animate__slideInDown'>
+          The Breaking Bad Universe
+        </h1>
+        <h2 className='subtitle animate__animated animate__slideInDown'>
+          Choose a show.
+        </h2>
       </header>
 
       <main className='main-container'>
@@ -39,7 +43,7 @@ export const MainScreen = () => {
           <img
             src={brbaImg}
             alt='Breaking Bad'
-            className='main-img'
+            className='main-img animate__animated'
             onMouseEnter={changeBackground}
             onMouseLeave={resetBackground}
           />
@@ -49,7 +53,7 @@ export const MainScreen = () => {
           <img
             src={bcsImg}
             alt='Better Call Saul'
-            className='main-img'
+            className='main-img animate__animated'
             onMouseEnter={changeBackground}
             onMouseLeave={resetBackground}
           />

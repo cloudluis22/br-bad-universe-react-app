@@ -1,24 +1,24 @@
 @use '../abstracts/variables.scss' as v;
 
-@mixin main-background-properties {
+@mixin main-background-properties($color) {
   height: 100vh;
   width: 100vw;
   transition: 0.2s ease-in-out;
+  background-color: $color;
 }
 
 .background-light-green {
-  @include main-background-properties;
-  background-color: lighten($color: v.$brba-green, $amount: 13);
+  @include main-background-properties(
+    lighten($color: v.$brba-green, $amount: 13)
+  );
 }
 
 .background-brba-green {
-  @include main-background-properties;
-  background-color: v.$brba-green;
+  @include main-background-properties(v.$brba-green);
 }
 
 .background-bcs-red {
-  @include main-background-properties;
-  background-color: darken($color: v.$bcs-red, $amount: 10);
+  @include main-background-properties(darken($color: v.$bcs-red, $amount: 10));
 }
 
 @mixin main-text {
