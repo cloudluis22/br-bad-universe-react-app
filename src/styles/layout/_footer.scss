@@ -1,0 +1,19 @@
+.app-footer {
+  background-color: black;
+  bottom: 0;
+  color: white;
+  row-gap: 15px;
+  display: flex;
+  flex-direction: column;
+  height: 13%;
+  justify-content: center;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.link-icon {
+  font-size: 35px;
+  margin: 0 10px 0 10px;
+  color: white;
+}
