@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import brbaImg from '../../images/brba-main-screen.jpg';
 import bcsImg from '../../images/bcs-main-screen.jpg';
+import { Footer } from '../ui/Footer';
 
 export const MainScreen = () => {
   const initialState = 'background-light-green';
@@ -59,6 +60,9 @@ export const MainScreen = () => {
           />
         </div>
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 };
