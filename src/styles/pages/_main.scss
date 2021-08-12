@@ -16,6 +16,10 @@
   text-align: center;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .background-light-green {
   @include main-background-properties(
     lighten($color: v.$brba-green, $amount: 13)
@@ -53,17 +57,13 @@
 .main-img {
   border-radius: 50%;
   height: clamp(250px, 48vh, 500px);
-  max-width: clamp(25%, 95%, 100%);
+  max-width: clamp(25%, 100%, 100%);
   object-fit: cover;
   transition: all 0.3s ease;
 
   &:hover {
     cursor: pointer;
     transform: scale(1.2);
-  }
-
-  &:hover ~ .show-title {
-    color: lightgrey;
   }
 }
 
