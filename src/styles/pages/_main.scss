@@ -56,27 +56,33 @@ body {
 
 .main-img {
   border-radius: 50%;
-  height: clamp(250px, 48vh, 500px);
+  box-shadow: 5px 5px 8px black;
+  height: clamp(320px, 48vw, 500px);
   max-width: clamp(25%, 100%, 100%);
   object-fit: cover;
+
   transition: all 0.3s ease;
 
   &:hover {
     cursor: pointer;
     transform: scale(1.2);
+    box-shadow: 10px 10px 10px black;
   }
+}
+
+#main-subtitle {
+  font-weight: lighter;
 }
 
 @media only screen and (max-width: 1083px) {
   .main-container {
     flex-direction: column;
     margin-top: 15px;
-    padding-bottom: 150px;
+    padding-bottom: 25%;
+    row-gap: 50px;
   }
 
   .main-img {
-    padding: 25px 25px 25px;
-
     &:hover {
       transform: scale(1.1);
     }

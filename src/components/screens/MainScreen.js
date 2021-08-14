@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import brbaImg from '../../images/brba-main-screen.jpg';
 import bcsImg from '../../images/bcs-main-screen.jpg';
@@ -34,30 +35,36 @@ export const MainScreen = () => {
         <h1 className='title animate__animated animate__fadeInUp'>
           The Breaking Bad Universe
         </h1>
-        <h2 className='subtitle animate__animated animate__fadeInUp'>
+        <h2
+          className='subtitle animate__animated animate__fadeInUp'
+          id='main-subtitle'>
           Choose a show.
         </h2>
       </header>
 
       <main className='main-container'>
         <div>
-          <img
-            src={brbaImg}
-            alt='Breaking Bad'
-            className='main-img animate__animated animate__fadeIn'
-            onMouseEnter={changeBackground}
-            onMouseLeave={resetBackground}
-          />
+          <Link to='/brba'>
+            <img
+              src={brbaImg}
+              alt='Breaking Bad'
+              className='main-img animate__animated animate__fadeIn'
+              onMouseEnter={changeBackground}
+              onMouseLeave={resetBackground}
+            />
+          </Link>
         </div>
 
         <div>
-          <img
-            src={bcsImg}
-            alt='Better Call Saul'
-            className='main-img animate__animated animate__fadeIn'
-            onMouseEnter={changeBackground}
-            onMouseLeave={resetBackground}
-          />
+          <Link to='/bcs'>
+            <img
+              src={bcsImg}
+              alt='Better Call Saul'
+              className='main-img animate__animated animate__fadeIn'
+              onMouseEnter={changeBackground}
+              onMouseLeave={resetBackground}
+            />
+          </Link>
         </div>
       </main>
       <footer>
