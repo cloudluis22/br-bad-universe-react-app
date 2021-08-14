@@ -1,7 +1,10 @@
+@use '../abstracts/variables' as v;
+
 .app-footer {
   background-color: black;
   bottom: 0;
   color: white;
+  font-family: v.$roboto;
   row-gap: 15px;
   display: flex;
   flex-direction: column;
@@ -16,4 +19,25 @@
   font-size: 35px;
   margin: 0 10px 0 10px;
   color: white;
+
+  transition: 0.1s ease-in;
+
+  &:hover {
+    color: darken($color: white, $amount: 25);
+    cursor: pointer;
+  }
+}
+
+#copyright-info {
+  color: darken($color: white, $amount: 50);
+}
+
+@media only screen and (max-width: 585px) {
+  #about-info {
+    display: none;
+  }
+
+  .app-footer {
+    height: 8%;
+  }
 }

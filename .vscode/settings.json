@@ -3,6 +3,8 @@
     "brba",
     "cloudluis",
     "fontawesome",
-    "fortawesome"
+    "fortawesome",
+    "noreferrer",
+    "preconnect"
   ]
 }
