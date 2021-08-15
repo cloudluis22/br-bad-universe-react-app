@@ -1,0 +1,28 @@
+@mixin brba-logo-props($margin-bottom, $padding-top) {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: $margin-bottom;
+  padding-top: $padding-top;
+}
+
+.brba-logo-full {
+  @include brba-logo-props(60px, 30px);
+  width: clamp(450px, 30vw, 500px);
+}
+
+.brba-logo-mobile {
+  @include brba-logo-props(20px, 10px);
+  width: clamp(250px, 20vw, 300px);
+  display: none;
+}
+
+@media only screen and (max-width: 850px) {
+  .brba-logo-full {
+    display: none;
+  }
+
+  .brba-logo-mobile {
+    display: block;
+  }
+}

@@ -1,0 +1,30 @@
+.search-bar-wrapper {
+  display: flex;
+  min-width: 100px;
+  position: relative;
+  margin: auto;
+  width: 65%;
+}
+
+.search-bar {
+  background-color: white;
+  height: 35px;
+  padding: 2px 23px 2px 30px;
+  width: 100%;
+  outline: 0;
+}
+
+.search-icon {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 14px;
+}
+
+.clear-icon {
+  position: absolute;
+  top: 8px;
+  right: 2%;
+  width: 10px;
+  cursor: pointer;
+}
