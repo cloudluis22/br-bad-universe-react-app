@@ -13,11 +13,11 @@
 
 .brba-logo-mobile {
   @include brba-logo-props(20px, 10px);
-  width: clamp(250px, 20vw, 300px);
+  width: clamp(150px, 18vw, 300px);
   display: none;
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 650px) {
   .brba-logo-full {
     display: none;
   }
