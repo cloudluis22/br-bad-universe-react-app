@@ -1,30 +1,46 @@
+@use '../abstracts/variables' as v;
+
 .search-bar-wrapper {
   display: flex;
   min-width: 100px;
   position: relative;
   margin: auto;
-  width: 65%;
+  width: 45%;
 }
 
 .search-bar {
   background-color: white;
-  height: 35px;
+  border: none;
+  border-radius: 35px 0px 0px 35px;
+  font-size: 1.3rem;
+  height: 60px;
   padding: 2px 23px 2px 30px;
   width: 100%;
   outline: 0;
 }
 
-.search-icon {
-  position: absolute;
-  top: 8px;
-  left: 8px;
-  width: 14px;
+.search-btn {
+  border: none;
+  border-radius: 0px 35px 35px 0px;
+  color: white;
+  cursor: pointer;
+  font-size: 1.5rem;
+  width: 20%;
 }
 
 .clear-icon {
+  font-size: 1.2rem;
   position: absolute;
-  top: 8px;
-  right: 2%;
+  top: 20px;
+  right: 20%;
   width: 10px;
   cursor: pointer;
+
+  &:hover {
+    color: gray;
+  }
+}
+
+.search-color-green {
+  background-color: lighten($color: v.$brba-green, $amount: 15);
 }
