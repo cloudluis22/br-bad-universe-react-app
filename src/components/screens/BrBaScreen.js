@@ -5,6 +5,10 @@ import brbaFullSizeImg from '../../images/brba-screen-full.png';
 import brbaMobileSizeImg from '../../images/brba-screen-mobile.png';
 
 export const BrBaScreen = () => {
+  const handleSearch = (value = '') => {
+    console.log(value);
+  };
+
   return (
     <div className='background-brba-green'>
       <img
@@ -17,7 +21,7 @@ export const BrBaScreen = () => {
         alt='Breaking Bad Mobile Logo'
         className='brba-logo-mobile'
       />
-      <SearchBar />
+      <SearchBar handleSearch={handleSearch} />
     </div>
   );
 };
