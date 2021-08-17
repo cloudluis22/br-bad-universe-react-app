@@ -5,8 +5,6 @@ import { faSearch, faTimes } from '@fortawesome/free-solid-svg-icons';
 export const SearchBar = ({ bcs }) => {
   const handleSearchSubmit = (evt) => {
     evt.preventDefault();
-
-    console.log('hola');
   };
 
   return (
