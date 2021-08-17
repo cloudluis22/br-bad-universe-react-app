@@ -2,9 +2,15 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faTimes } from '@fortawesome/free-solid-svg-icons';
 
-export const SearchBar = ({ bcs, brba }) => {
+export const SearchBar = ({ bcs }) => {
+  const handleSearchSubmit = (evt) => {
+    evt.preventDefault();
+
+    console.log('hola');
+  };
+
   return (
-    <div className='search-bar-wrapper'>
+    <form className='search-bar-wrapper' onSubmit={handleSearchSubmit}>
       <input
         type='text'
         placeholder='Search characters'
@@ -14,10 +20,11 @@ export const SearchBar = ({ bcs, brba }) => {
       <button
         type='submit'
         className={
-          brba ? 'search-btn search-color-green' : 'search-btn search-color-red'
+          // Por defecto se coloca el diseño de Breaking Bad a menos de que se especifique esto.
+          bcs ? 'search-btn search-color-red' : 'search-btn search-color-green'
         }>
         <FontAwesomeIcon icon={faSearch} />
       </button>
-    </div>
+    </form>
   );
 };

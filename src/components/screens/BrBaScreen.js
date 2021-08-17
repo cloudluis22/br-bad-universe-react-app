@@ -17,7 +17,7 @@ export const BrBaScreen = () => {
         alt='Breaking Bad Mobile Logo'
         className='brba-logo-mobile'
       />
-      <SearchBar brba />
+      <SearchBar />
     </div>
   );
 };
