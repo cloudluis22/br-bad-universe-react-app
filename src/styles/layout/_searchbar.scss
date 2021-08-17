@@ -12,6 +12,7 @@
   background-color: white;
   border: none;
   border-radius: 35px 0px 0px 35px;
+  font-family: v.$roboto;
   font-size: 1.3rem;
   height: 60px;
   padding: 2px 23px 2px 30px;
@@ -43,6 +44,10 @@
 
 .search-color-green {
   background-color: lighten($color: v.$brba-green, $amount: 15);
+
+  &:hover {
+    background-color: lighten($color: v.$brba-green, $amount: 10);
+  }
 }
 
 .search-color-red {
