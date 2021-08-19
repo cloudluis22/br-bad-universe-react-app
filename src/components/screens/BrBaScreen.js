@@ -1,7 +1,7 @@
 import React from 'react';
 import { SearchBar } from '../ui/SearchBar';
 
-import { getData } from '../../helpers/getData';
+import { useFetchData } from '../../hooks/useFetchData';
 
 import brbaFullSizeImg from '../../images/brba-screen-full.png';
 import brbaMobileSizeImg from '../../images/brba-screen-mobile.png';
@@ -11,7 +11,8 @@ export const BrBaScreen = () => {
     console.log(value);
   };
 
-  getData();
+  const { loading } = useFetchData(false);
+  console.log(loading);
 
   return (
     <div className='background-brba-green'>
