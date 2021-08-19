@@ -5,6 +5,7 @@ import { useFetchData } from '../../hooks/useFetchData';
 
 import brbaFullSizeImg from '../../images/brba-screen-full.png';
 import brbaMobileSizeImg from '../../images/brba-screen-mobile.png';
+import { Loading } from '../ui/Loading';
 
 export const BrBaScreen = () => {
   const handleSearch = (value = '') => {
@@ -27,6 +28,7 @@ export const BrBaScreen = () => {
         className='brba-logo-mobile'
       />
       <SearchBar handleSearch={handleSearch} />
+      <Loading />
     </div>
   );
 };

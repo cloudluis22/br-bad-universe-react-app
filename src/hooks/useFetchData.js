@@ -12,6 +12,7 @@ export const useFetchData = (isBCS, searchParam = '') => {
 
   useEffect(() => {
     const info = getData('');
+
     setDataState({
       ok: true,
       loading: false,
