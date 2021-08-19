@@ -1,0 +1,21 @@
+@use '../abstracts/variables' as v;
+
+.loading-container {
+  margin-top: 10vh;
+  text-align: center;
+
+  p {
+    color: white;
+    font-family: v.$roboto;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 475px) {
+  .loading-container {
+    p {
+      display: none;
+    }
+  }
+}
