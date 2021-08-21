@@ -12,8 +12,8 @@ export const BrBaScreen = () => {
     console.log(value);
   };
 
-  const { loading } = useFetchData(false);
-  console.log(loading);
+  const { loading, data } = useFetchData(false);
+  console.log(data);
 
   return (
     <div className='background-brba-green'>
@@ -28,7 +28,7 @@ export const BrBaScreen = () => {
         className='brba-logo-mobile'
       />
       <SearchBar handleSearch={handleSearch} />
-      <Loading />
+      {loading && <Loading />}
     </div>
   );
 };

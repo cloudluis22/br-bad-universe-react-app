@@ -11,14 +11,29 @@ export const useFetchData = (isBCS, searchParam = '') => {
   const [dataState, setDataState] = useState(state);
 
   useEffect(() => {
-    const info = getData('');
+    let result = [];
+    const fetchData = async () => {
+      const info = await getData(searchParam);
 
-    setDataState({
-      ok: true,
-      loading: false,
-      data: info,
-    });
-  }, []);
+      if (!isBCS) {
+        result = info.filter(
+          (char) => char.better_call_saul_appearance.length === 0
+        );
+      } else {
+        result = info.filter(
+          (char) => char.better_call_saul_appearance.length !== 0
+        );
+      }
+
+      setDataState({
+        ok: true,
+        loading: false,
+        data: result,
+      });
+    };
+
+    fetchData();
+  }, [searchParam, isBCS]);
 
   return dataState;
 };
