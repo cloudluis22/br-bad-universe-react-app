@@ -9,11 +9,16 @@ const state = {
 
 export const useFetchData = (isBCS, searchParam = '') => {
   const [dataState, setDataState] = useState(state);
+  const [paramState, setParamState] = useState(searchParam);
+
+  const setSearch = (value) => {
+    setParamState(value);
+  };
 
   useEffect(() => {
     let result = [];
     const fetchData = async () => {
-      const info = await getData(searchParam);
+      const info = await getData(paramState);
 
       if (!isBCS) {
         result = info.filter(
@@ -33,7 +38,10 @@ export const useFetchData = (isBCS, searchParam = '') => {
     };
 
     fetchData();
-  }, [searchParam, isBCS]);
+  }, [searchParam, isBCS, paramState]);
 
-  return dataState;
+  return {
+    dataState,
+    setSearch,
+  };
 };

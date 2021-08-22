@@ -9,10 +9,11 @@ import { Loading } from '../ui/Loading';
 
 export const BrBaScreen = () => {
   const handleSearch = (value = '') => {
-    console.log(value);
+    setSearch(value);
   };
 
-  const { loading, data } = useFetchData(false);
+  const { dataState, setSearch } = useFetchData(false);
+  const { data, loading } = dataState;
   console.log(data);
 
   return (
