@@ -1,18 +1,19 @@
 import React from 'react';
 import { SearchBar } from '../ui/SearchBar';
 
+import { Loading } from '../ui/Loading';
+import { CharacterGrid } from '../ui/CharacterGrid';
 import { useFetchData } from '../../hooks/useFetchData';
 
 import brbaFullSizeImg from '../../images/brba-screen-full.png';
 import brbaMobileSizeImg from '../../images/brba-screen-mobile.png';
-import { Loading } from '../ui/Loading';
 
 export const BrBaScreen = () => {
   const handleSearch = (value = '') => {
     setSearch(value);
   };
 
-  const { dataState, setSearch } = useFetchData(false);
+  const { dataState, setSearch } = useFetchData(true);
   const { data, loading } = dataState;
 
   return (
@@ -28,7 +29,7 @@ export const BrBaScreen = () => {
         className='brba-logo-mobile'
       />
       <SearchBar handleSearch={handleSearch} />
-      {loading && <Loading />}
+      {loading ? <Loading /> : <CharacterGrid data={data} />}
     </div>
   );
 };

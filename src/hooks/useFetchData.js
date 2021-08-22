@@ -7,9 +7,9 @@ const state = {
   data: [],
 };
 
-export const useFetchData = (isBCS, searchParam = '') => {
+export const useFetchData = (isBCS) => {
   const [dataState, setDataState] = useState(state);
-  const [paramState, setParamState] = useState(searchParam);
+  const [paramState, setParamState] = useState('');
 
   const setSearch = (value) => {
     setParamState(value);
@@ -21,12 +21,10 @@ export const useFetchData = (isBCS, searchParam = '') => {
       const info = await getData(paramState);
 
       if (!isBCS) {
-        result = info.filter(
-          (char) => char.better_call_saul_appearance.length === 0
-        );
+        result = info.filter((char) => char.appearance.length > 0);
       } else {
         result = info.filter(
-          (char) => char.better_call_saul_appearance.length !== 0
+          (char) => char.better_call_saul_appearance.length > 0
         );
       }
 
@@ -38,7 +36,7 @@ export const useFetchData = (isBCS, searchParam = '') => {
     };
 
     fetchData();
-  }, [searchParam, isBCS, paramState]);
+  }, [isBCS, paramState]);
 
   return {
     dataState,
