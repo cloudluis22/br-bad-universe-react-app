@@ -14,7 +14,6 @@ export const BrBaScreen = () => {
 
   const { dataState, setSearch } = useFetchData(false);
   const { data, loading } = dataState;
-  console.log(data);
 
   return (
     <div className='background-brba-green'>
