@@ -13,7 +13,7 @@ export const BrBaScreen = () => {
     setSearch(value);
   };
 
-  const { dataState, setSearch } = useFetchData(true);
+  const { dataState, setSearch } = useFetchData(false);
   const { data, loading } = dataState;
 
   return (
