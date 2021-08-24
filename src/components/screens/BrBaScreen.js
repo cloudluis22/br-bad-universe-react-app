@@ -3,6 +3,7 @@ import { SearchBar } from '../ui/SearchBar';
 
 import { Loading } from '../ui/Loading';
 import { CharacterGrid } from '../ui/CharacterGrid';
+import { Footer } from '../ui/Footer';
 import { useFetchData } from '../../hooks/useFetchData';
 
 import brbaFullSizeImg from '../../images/brba-screen-full.png';
@@ -30,6 +31,7 @@ export const BrBaScreen = () => {
       />
       <SearchBar handleSearch={handleSearch} />
       {loading ? <Loading /> : <CharacterGrid data={data} />}
+      <Footer />
     </div>
   );
 };

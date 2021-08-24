@@ -1,9 +1,22 @@
+@use '../abstracts/variables' as v;
+
 .character-card {
-  width: 17vw;
-  height: 40vh;
+  height: 450px;
+  width: 350px;
 }
 
 .character-img {
+  border-radius: 10px;
   width: 100%;
   height: 100%;
+  object-fit: cover;
+}
+
+.character-name {
+  bottom: 75px;
+  left: 20px;
+  color: white;
+  font-family: v.$roboto;
+  font-size: 2.3rem;
+  position: relative;
 }
