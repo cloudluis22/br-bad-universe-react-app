@@ -1,10 +1,18 @@
 import React from 'react';
 
 export const CharacterCard = ({ imgSrc, name }) => {
+  let textClass = '';
+
+  if (name.trim().length > 18) {
+    textClass = 'character-name small-font';
+  } else {
+    textClass = 'character-name';
+  }
+
   return (
     <div className='character-card'>
       <img src={imgSrc} alt={name} className='character-img' />
-      <span className='character-name'> {name} </span>
+      <span className={textClass}> {name} </span>
     </div>
   );
 };
