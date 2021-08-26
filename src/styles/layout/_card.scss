@@ -1,8 +1,8 @@
 @use '../abstracts/variables' as v;
 
 .character-card {
-  height: 450px;
-  width: 350px;
+  height: clamp(350px, 50vh, 500px);
+  width: clamp(250px, 40vh, 450px);
 }
 
 .character-img {
@@ -17,10 +17,10 @@
   left: 20px;
   color: white;
   font-family: v.$roboto;
-  font-size: 2.3rem;
+  font-size: clamp(10px, 8vw, 40px);
   position: relative;
 }
 
 .small-font {
-  font-size: 1.7rem;
+  font-size: clamp(10px, 10vw, 30px);
 }

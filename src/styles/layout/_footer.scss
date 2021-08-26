@@ -4,10 +4,10 @@
   background-color: black;
   bottom: 0;
   color: white;
-  font-family: v.$roboto;
   row-gap: 15px;
   display: flex;
   flex-direction: column;
+  font-family: v.$roboto;
   height: 15vh;
   justify-content: center;
   position: absolute;
@@ -38,6 +38,6 @@
   }
 
   .app-footer {
-    height: 8%;
+    height: 15vh;
   }
 }
