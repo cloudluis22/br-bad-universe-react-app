@@ -1,6 +1,6 @@
 import React from 'react';
 import { CharacterCard } from './CharacterCard';
-import { Loading } from './Loading';
+import { NotFound } from './NotFound';
 
 export const CharacterGrid = ({ data }) => {
   if (data.length > 0) {
@@ -18,6 +18,6 @@ export const CharacterGrid = ({ data }) => {
       </div>
     );
   } else {
-    return <Loading />;
+    return <NotFound />;
   }
 };
