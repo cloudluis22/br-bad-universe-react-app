@@ -23,3 +23,18 @@
   margin-bottom: $margin-bottom;
   padding-top: $padding-top;
 }
+
+// fetching status mixins.
+@mixin fetch-status-gen-props {
+  margin-top: clamp(20px, 10vh, 30px);
+  text-align: center;
+
+  p {
+    color: white;
+    font-family: v.$roboto;
+    font-size: clamp(5px, 10vw, 20px);
+    margin-top: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}

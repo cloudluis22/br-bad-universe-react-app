@@ -11,7 +11,7 @@ export const Loading = ({ isBCS }) => {
   }
 
   return (
-    <div className='loading-container'>
+    <div className='fetch-message-container'>
       <Loader type='Oval' color={color} height={200} width={200} />
       <p> Fetching data! This shouldn't take too long. </p>
     </div>

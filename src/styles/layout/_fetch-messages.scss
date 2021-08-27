@@ -1,0 +1,6 @@
+@use '../abstracts/variables' as v;
+@import '../abstracts/mixins';
+
+.fetch-message-container {
+  @include fetch-status-gen-props;
+}
