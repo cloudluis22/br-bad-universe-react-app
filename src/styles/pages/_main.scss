@@ -1,47 +1,34 @@
-@use '../abstracts/variables.scss' as v;
-
-@mixin main-background-properties($color) {
-  background-color: $color;
-  background-size: cover;
-  height: auto;
-  min-height: 100vh;
-  transition: 0.2s ease-in-out;
-  width: 100vw;
-}
-
-@mixin text-initial-config {
-  color: white;
-  font-family: Helvetica, sans-serif;
-  font-weight: bolder;
-  text-align: center;
-}
+@use '../abstracts/variables' as v;
+@import '../abstracts/mixins';
 
 body {
   overflow-x: hidden;
 }
 
 .background-light-green {
-  @include main-background-properties(
+  @include main-screen-background-properties(
     lighten($color: v.$brba-green, $amount: 13)
   );
 }
 
 .background-brba-green {
-  @include main-background-properties(v.$brba-green);
+  @include main-screen-background-properties(v.$brba-green);
 }
 
 .background-bcs-red {
-  @include main-background-properties(darken($color: v.$bcs-red, $amount: 10));
+  @include main-screen-background-properties(
+    darken($color: v.$bcs-red, $amount: 10)
+  );
 }
 
 .title {
-  @include text-initial-config;
+  @include main-screen-text-initial-config;
   font-size: clamp(30px, 5vw, 60px);
   padding-top: 15px;
 }
 
 .subtitle {
-  @include text-initial-config;
+  @include main-screen-text-initial-config;
   font-size: clamp(25px, 3vw, 60px);
   padding-top: 15px;
 }

@@ -1,0 +1,25 @@
+// Main Screen mixins.
+@mixin main-screen-background-properties($color) {
+  background-color: $color;
+  background-size: cover;
+  height: auto;
+  min-height: 100vh;
+  transition: 0.2s ease-in-out;
+  width: 100vw;
+}
+
+@mixin main-screen-text-initial-config {
+  color: white;
+  font-family: Helvetica, sans-serif;
+  font-weight: bolder;
+  text-align: center;
+}
+
+// Breaking Bad logo mixin.
+@mixin brba-logo-props($margin-bottom, $padding-top) {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: $margin-bottom;
+  padding-top: $padding-top;
+}
