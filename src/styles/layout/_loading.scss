@@ -1,21 +1,15 @@
 @use '../abstracts/variables' as v;
 
 .loading-container {
-  margin-top: 10vh;
+  margin-top: clamp(20px, 10vh, 30px);
   text-align: center;
 
   p {
     color: white;
     font-family: v.$roboto;
-    font-size: 20px;
+    font-size: clamp(5px, 10vw, 20px);
     margin-top: 10px;
-  }
-}
-
-@media only screen and (max-width: 475px) {
-  .loading-container {
-    p {
-      display: none;
-    }
+    margin-left: 10%;
+    margin-right: 10%;
   }
 }

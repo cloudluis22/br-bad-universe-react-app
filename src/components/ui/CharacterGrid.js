@@ -1,5 +1,6 @@
 import React from 'react';
 import { CharacterCard } from './CharacterCard';
+import { Loading } from './Loading';
 
 export const CharacterGrid = ({ data }) => {
   if (data.length > 0) {
@@ -17,6 +18,6 @@ export const CharacterGrid = ({ data }) => {
       </div>
     );
   } else {
-    return <p>no content</p>;
+    return <Loading />;
   }
 };
