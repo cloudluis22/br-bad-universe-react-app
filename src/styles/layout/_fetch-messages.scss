@@ -4,3 +4,8 @@
 .fetch-message-container {
   @include fetch-status-gen-props;
 }
+
+#not-found-icon {
+  color: green;
+  font-size: clamp(100px, 30vw, 200px);
+}
