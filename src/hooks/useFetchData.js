@@ -18,21 +18,31 @@ export const useFetchData = (isBCS) => {
   useEffect(() => {
     let result = [];
     const fetchData = async () => {
-      const info = await getData(paramState);
+      try {
+        const info = await getData(paramState);
 
-      if (!isBCS) {
-        result = info.filter((char) => char.appearance.length > 0);
-      } else {
-        result = info.filter(
-          (char) => char.better_call_saul_appearance.length > 0
-        );
+        if (!isBCS) {
+          result = info.filter((char) => char.appearance.length > 0);
+        } else {
+          result = info.filter(
+            (char) => char.better_call_saul_appearance.length > 0
+          );
+        }
+
+        setDataState({
+          ok: true,
+          loading: false,
+          data: result,
+          searchParam: paramState,
+        });
+      } catch (error) {
+        console.log('xs');
+        setDataState({
+          ok: false,
+          loading: false,
+          data: [],
+        });
       }
-
-      setDataState({
-        ok: true,
-        loading: false,
-        data: result,
-      });
     };
 
     fetchData();
