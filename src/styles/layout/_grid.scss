@@ -2,9 +2,9 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
-  row-gap: 45px;
   margin-top: 50px;
   padding-bottom: 10%;
+  row-gap: 45px;
 }
 
 @media only screen and (max-width: 1160px) {

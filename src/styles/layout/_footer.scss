@@ -4,22 +4,21 @@
   background-color: black;
   bottom: 0;
   color: white;
-  row-gap: 15px;
   display: flex;
   flex-direction: column;
   font-family: v.$roboto;
   height: 15vh;
   justify-content: center;
   position: absolute;
+  row-gap: 15px;
   text-align: center;
   width: 100%;
 }
 
 .link-icon {
+  color: white;
   font-size: 35px;
   margin: 0 10px 0 10px;
-  color: white;
-
   transition: 0.1s ease-in;
 
   &:hover {
