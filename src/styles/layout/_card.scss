@@ -1,8 +1,8 @@
 @use '../abstracts/variables' as v;
 
 .character-card {
-  animation-duration: 0.5s;
   animation: fadeInUp;
+  animation-duration: 0.5s;
   box-shadow: 15px 10px 15px black;
   filter: grayscale(50%);
   height: clamp(350px, 50vh, 500px);

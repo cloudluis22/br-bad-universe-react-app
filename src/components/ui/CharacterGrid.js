@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { CharacterCard } from './CharacterCard';
 import { NotFound } from './NotFound';
 
@@ -20,4 +21,8 @@ export const CharacterGrid = ({ data }) => {
   } else {
     return <NotFound />;
   }
+};
+
+CharacterGrid.propTypes = {
+  data: PropTypes.array.isRequired,
 };

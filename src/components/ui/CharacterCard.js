@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export const CharacterCard = ({ imgSrc, name }) => {
   let textClass = '';
@@ -15,4 +16,9 @@ export const CharacterCard = ({ imgSrc, name }) => {
       <span className={textClass}> {name} </span>
     </div>
   );
+};
+
+CharacterCard.propTypes = {
+  imgSrc: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
 };
