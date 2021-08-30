@@ -1,14 +1,18 @@
 @use '../abstracts/variables' as v;
 
 .character-card {
-  height: clamp(350px, 50vh, 500px);
-  width: clamp(250px, 40vh, 450px);
+  animation-duration: 0.5s;
+  animation: fadeInUp;
   box-shadow: 15px 10px 15px black;
-  transition: 0.1s ease-in;
+  filter: grayscale(50%);
+  height: clamp(350px, 50vh, 500px);
+  transition: 0.2s ease-in-out;
+  width: clamp(250px, 40vh, 450px);
 
   &:hover {
     box-shadow: 20px 10px 15px black;
     cursor: pointer;
+    filter: grayscale(0%);
     transform: scale(1.1);
   }
 }
