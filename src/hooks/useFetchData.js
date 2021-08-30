@@ -36,7 +36,6 @@ export const useFetchData = (isBCS) => {
           searchParam: paramState,
         });
       } catch (error) {
-        console.log('xs');
         setDataState({
           ok: false,
           loading: false,

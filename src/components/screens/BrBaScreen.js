@@ -8,6 +8,7 @@ import { useFetchData } from '../../hooks/useFetchData';
 
 import brbaFullSizeImg from '../../images/brba-screen-full.png';
 import brbaMobileSizeImg from '../../images/brba-screen-mobile.png';
+import { FatalError } from '../ui/FatalError';
 
 export const BrBaScreen = () => {
   const handleSearch = (value = '') => {
@@ -15,9 +16,7 @@ export const BrBaScreen = () => {
   };
 
   const { dataState, setSearch } = useFetchData(false);
-  const { data, loading } = dataState;
-
-  console.log(dataState);
+  const { data, loading, ok } = dataState;
 
   return (
     <div className='background-brba-green'>
@@ -32,7 +31,13 @@ export const BrBaScreen = () => {
         className='brba-logo-mobile'
       />
       <SearchBar handleSearch={handleSearch} />
-      {loading ? <Loading /> : <CharacterGrid data={data} />}
+      {loading ? (
+        <Loading />
+      ) : ok ? (
+        <CharacterGrid data={data} />
+      ) : (
+        <FatalError />
+      )}
       <Footer />
     </div>
   );
