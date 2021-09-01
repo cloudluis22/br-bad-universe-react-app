@@ -39,6 +39,11 @@ export const SearchBar = ({ bcs, handleSearch }) => {
     reset();
   };
 
+  const handleResetSearch = () => {
+    handleSearch('');
+    setTempSearchValue('');
+  };
+
   return (
     <form className='searchbar-wrapper' onSubmit={handleSubmit}>
       <input
@@ -70,7 +75,7 @@ export const SearchBar = ({ bcs, handleSearch }) => {
         <FontAwesomeIcon icon={faSearch} />
       </button>
       {!!tempSearchValue && (
-        <span className='reset-search-icon' onClick={() => handleSearch('')}>
+        <span className='reset-search-icon' onClick={handleResetSearch}>
           <FontAwesomeIcon icon={faRedoAlt} className='searchbar-container' />
         </span>
       )}
