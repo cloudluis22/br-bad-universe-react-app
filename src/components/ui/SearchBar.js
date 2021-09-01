@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch, faTimes } from '@fortawesome/free-solid-svg-icons';
+import {
+  faSearch,
+  faTimes,
+  faRedoAlt,
+} from '@fortawesome/free-solid-svg-icons';
 import { useForm } from '../../hooks/useForm';
-import { ResetSearch } from './ResetSearch';
 
 export const SearchBar = ({ bcs, handleSearch }) => {
   const [searchValue, handleInputChange, reset] = useForm({
@@ -59,7 +62,9 @@ export const SearchBar = ({ bcs, handleSearch }) => {
         }>
         <FontAwesomeIcon icon={faSearch} />
       </button>
-      <ResetSearch />
+      <span className='reset-search-icon'>
+        <FontAwesomeIcon icon={faRedoAlt} className='searchbar-container' />
+      </span>
     </form>
   );
 };

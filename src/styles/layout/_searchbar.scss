@@ -48,7 +48,7 @@
   cursor: pointer;
   font-size: 1.2rem;
   position: absolute;
-  right: 18%;
+  right: clamp(90px, 22%, 250px);
   top: 20px;
   width: 10px;
 
