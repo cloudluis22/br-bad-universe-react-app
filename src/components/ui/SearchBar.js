@@ -17,6 +17,8 @@ export const SearchBar = ({ bcs, handleSearch }) => {
 
   const [clearState, setClearState] = useState(false);
 
+  const [tempSearchValue, setTempSearchValue] = useState('');
+
   useEffect(() => {
     if (search.length > 0) {
       setClearState(true);
@@ -32,6 +34,7 @@ export const SearchBar = ({ bcs, handleSearch }) => {
       return;
     }
 
+    setTempSearchValue(search);
     handleSearch(search);
     reset();
   };
@@ -57,14 +60,20 @@ export const SearchBar = ({ bcs, handleSearch }) => {
       <button
         type='submit'
         className={
-          // Por defecto se coloca el diseño de Breaking Bad a menos de que se especifique esto.
+          /*
+            Por defecto se coloca el diseño de Breaking Bad a menos de que se especifique.
+            -----------------------------------------------------------------------------------
+            By default it uses the Breaking Bad design unless specified.
+          */
           bcs ? 'search-btn search-color-red' : 'search-btn search-color-green'
         }>
         <FontAwesomeIcon icon={faSearch} />
       </button>
-      <span className='reset-search-icon'>
-        <FontAwesomeIcon icon={faRedoAlt} className='searchbar-container' />
-      </span>
+      {!!tempSearchValue && (
+        <span className='reset-search-icon' onClick={() => handleSearch('')}>
+          <FontAwesomeIcon icon={faRedoAlt} className='searchbar-container' />
+        </span>
+      )}
     </form>
   );
 };
