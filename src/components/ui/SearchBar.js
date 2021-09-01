@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { useForm } from '../../hooks/useForm';
+import { ResetSearch } from './ResetSearch';
 
 export const SearchBar = ({ bcs, handleSearch }) => {
   const [searchValue, handleInputChange, reset] = useForm({
@@ -33,14 +34,14 @@ export const SearchBar = ({ bcs, handleSearch }) => {
   };
 
   return (
-    <form className='search-bar-wrapper' onSubmit={handleSubmit}>
+    <form className='searchbar-wrapper' onSubmit={handleSubmit}>
       <input
         type='text'
         placeholder='Search characters'
         name='search'
         value={search}
         onChange={handleInputChange}
-        className='search-bar'
+        className='searchbar'
       />
       {clearState && (
         <FontAwesomeIcon
@@ -58,6 +59,7 @@ export const SearchBar = ({ bcs, handleSearch }) => {
         }>
         <FontAwesomeIcon icon={faSearch} />
       </button>
+      <ResetSearch />
     </form>
   );
 };
