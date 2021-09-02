@@ -3,7 +3,7 @@
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   margin-top: 50px;
-  padding-bottom: 10%;
+  padding-bottom: clamp(200px, 10%, 350px);
   row-gap: 45px;
 }
 
