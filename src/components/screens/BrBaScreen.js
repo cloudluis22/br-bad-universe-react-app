@@ -1,14 +1,15 @@
 import React from 'react';
-import { SearchBar } from '../ui/SearchBar';
+import Modal from 'react-modal';
 
+import { SearchBar } from '../ui/SearchBar';
 import { Loading } from '../ui/Loading';
 import { CharacterGrid } from '../ui/CharacterGrid';
 import { Footer } from '../ui/Footer';
 import { useFetchData } from '../../hooks/useFetchData';
+import { FatalError } from '../ui/FatalError';
 
 import brbaFullSizeImg from '../../images/brba-screen-full.png';
 import brbaMobileSizeImg from '../../images/brba-screen-mobile.png';
-import { FatalError } from '../ui/FatalError';
 
 export const BrBaScreen = () => {
   const handleSearch = (value = '') => {
@@ -17,6 +18,8 @@ export const BrBaScreen = () => {
 
   const { dataState, setSearch } = useFetchData(false);
   const { data, loading, ok } = dataState;
+
+  console.log(Modal.defaultStyles);
 
   return (
     <div className='background-brba-green'>
@@ -39,6 +42,7 @@ export const BrBaScreen = () => {
         <FatalError />
       )}
       <Footer />
+      <Modal isOpen='true' className='modal' overlayClassName='modal-overlay' />
     </div>
   );
 };
