@@ -1,6 +1,6 @@
 import React from 'react';
-import Modal from 'react-modal';
 
+import { CharacterModal } from '../ui/CharacterModal';
 import { SearchBar } from '../ui/SearchBar';
 import { Loading } from '../ui/Loading';
 import { CharacterGrid } from '../ui/CharacterGrid';
@@ -18,8 +18,6 @@ export const BrBaScreen = () => {
 
   const { dataState, setSearch } = useFetchData(false);
   const { data, loading, ok } = dataState;
-
-  console.log(Modal.defaultStyles);
 
   return (
     <div className='background-brba-green'>
@@ -42,7 +40,7 @@ export const BrBaScreen = () => {
         <FatalError />
       )}
       <Footer />
-      <Modal isOpen='true' className='modal' overlayClassName='modal-overlay' />
+      <CharacterModal />
     </div>
   );
 };
