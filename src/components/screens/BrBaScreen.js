@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { CharacterModal } from '../ui/CharacterModal';
+import { CharacterModal } from '../characters/CharacterModal';
 import { SearchBar } from '../ui/SearchBar';
 import { Loading } from '../ui/Loading';
-import { CharacterGrid } from '../ui/CharacterGrid';
+import { CharacterGrid } from '../characters/CharacterGrid';
 import { Footer } from '../ui/Footer';
 import { useFetchData } from '../../hooks/useFetchData';
 import { FatalError } from '../ui/FatalError';

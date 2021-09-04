@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { CharacterCard } from './CharacterCard';
-import { NotFound } from './NotFound';
+import { NotFound } from '../ui/NotFound';
 
 export const CharacterGrid = ({ data }) => {
   if (data.length > 0) {
