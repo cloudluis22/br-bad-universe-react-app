@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
+import { CharacterContext } from '../CharacterContext';
 import { CharacterModal } from '../characters/CharacterModal';
 import { SearchBar } from '../ui/SearchBar';
 import { Loading } from '../ui/Loading';
@@ -18,6 +19,8 @@ export const BrBaScreen = () => {
 
   const { dataState, setSearch } = useFetchData(false);
   const { data, loading, ok } = dataState;
+
+  //const { context, setContext } = useContext(CharacterContext);
 
   return (
     <div className='background-brba-green'>
