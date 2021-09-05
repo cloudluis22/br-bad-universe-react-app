@@ -1,11 +1,12 @@
 .modal {
   background-color: white;
-  bottom: 40px;
-  left: 40px;
+  border-radius: 10px;
+  bottom: 80px;
+  left: 35%;
   outline: none;
   position: absolute;
-  right: 40px;
-  top: 40px;
+  right: 35%;
+  top: 80px;
 }
 
 .modal-overlay {
@@ -15,4 +16,11 @@
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media only screen and (max-width: 1200px) {
+  .modal {
+    left: 8%;
+    right: 8%;
+  }
 }
