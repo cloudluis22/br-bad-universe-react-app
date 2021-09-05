@@ -28,6 +28,7 @@ export const CharacterCard = ({
     setContext({
       isOpen: true,
       character: {
+        imgSrc,
         name,
         birthday,
         occupation,
