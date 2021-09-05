@@ -12,6 +12,13 @@ export const CharacterGrid = ({ data }) => {
             <CharacterCard
               imgSrc={char.img}
               name={char.name}
+              birthday={char.birthday}
+              occupation={char.occupation}
+              status={char.status}
+              nickname={char.nickname}
+              appearance={char.appearance}
+              portrayed={char.portrayed}
+              category={char.category}
               key={char.char_id}
             />
           );

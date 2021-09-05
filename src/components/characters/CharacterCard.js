@@ -1,7 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 
-export const CharacterCard = ({ imgSrc, name }) => {
+import { CharacterContext } from '../CharacterContext';
+
+export const CharacterCard = ({
+  imgSrc,
+  name,
+  birthday,
+  occupation,
+  status,
+  nickname,
+  appearance,
+  portrayed,
+  category,
+}) => {
   let textClass = '';
 
   if (name.trim().length > 18) {
@@ -10,8 +22,26 @@ export const CharacterCard = ({ imgSrc, name }) => {
     textClass = 'character-name';
   }
 
+  const { setContext } = useContext(CharacterContext);
+
+  const openCharacterModal = () => {
+    setContext({
+      isOpen: true,
+      character: {
+        name,
+        birthday,
+        occupation,
+        status,
+        nickname,
+        appearance,
+        portrayed,
+        category,
+      },
+    });
+  };
+
   return (
-    <div className='character-card'>
+    <div className='character-card' onClick={openCharacterModal}>
       <img src={imgSrc} alt={name} className='character-img' />
       <span className={textClass}> {name} </span>
     </div>
