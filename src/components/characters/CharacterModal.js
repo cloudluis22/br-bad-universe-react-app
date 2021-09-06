@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import Modal from 'react-modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
@@ -19,13 +19,15 @@ export const CharacterModal = () => {
     nickname,
     appearance,
     portrayed,
-    category,
   } = character;
 
   const closeModal = () => {
     setContext({
       isOpen: false,
-      character: {},
+      character: {
+        occupation: [],
+        appearance: [],
+      },
     });
   };
 
@@ -46,7 +48,43 @@ export const CharacterModal = () => {
 
         <div className='modal-character-container'>
           <div className='modal-image-container'>
-            <img src={imgSrc} className='modal-image' />
+            <img src={imgSrc} className='modal-image' alt={name} />
+          </div>
+
+          <div className='modal-attributes-container'>
+            <div className='character-attribute-container'>
+              <h2 className='character-attribute-title'> Portrayed by: </h2>
+              <p className='character-attribute-value'> {portrayed} </p>
+            </div>
+
+            <div className='character-attribute-container'>
+              <h2 className='character-attribute-title'> Birthday: </h2>
+              <p className='character-attribute-value'> {birthday} </p>
+            </div>
+
+            <div className='character-attribute-container'>
+              <h2 className='character-attribute-title'> Nickname: </h2>
+              <p className='character-attribute-value'> {nickname} </p>
+            </div>
+
+            <div className='character-attribute-container'>
+              <h2 className='character-attribute-title'> Occupation: </h2>
+              {occupation.map((occ) => {
+                return <p className='character-attribute-value'> {occ} </p>;
+              })}
+            </div>
+
+            <div className='character-attribute-container'>
+              <h2 className='character-attribute-title'> Status: </h2>
+              <p className='character-attribute-value'> {status} </p>
+            </div>
+
+            <div className='character-attribute-container'>
+              <h2 className='character-attribute-title'> Appearance: </h2>
+              <p className='character-attribute-value'>
+                {`Since season ${appearance[0]}`}
+              </p>
+            </div>
           </div>
         </div>
       </Modal>
