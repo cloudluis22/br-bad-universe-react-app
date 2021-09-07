@@ -1,6 +1,8 @@
 @use '../abstracts/variables' as v;
 
 .modal {
+  animation: slideInUp;
+  animation-duration: 0.5s;
   background-color: white;
   border-radius: 10px;
   bottom: 80px;
@@ -13,6 +15,8 @@
 }
 
 .modal-overlay {
+  animation: fadeIn;
+  animation-duration: 0.5s;
   background-color: rgba(0, 0, 0, 0.5);
   bottom: 0;
   left: 0;
@@ -82,9 +86,9 @@
 @media only screen and (max-width: 1200px) {
   .modal {
     left: 8%;
-    right: 8%;
-    overflow-y: auto;
     overflow-x: hidden;
+    overflow-y: auto;
+    right: 8%;
   }
 
   .modal-name {
@@ -99,9 +103,9 @@
   }
 
   .modal-attributes-container {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
 
   .modal-image-container {
