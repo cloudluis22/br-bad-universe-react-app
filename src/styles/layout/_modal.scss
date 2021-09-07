@@ -29,10 +29,10 @@
 
 .modal-close {
   color: lightgray;
-  font-size: 2rem;
+  font-size: clamp(30px, 2vw, 40px);
   position: absolute;
   right: 30px;
-  top: 30px;
+  top: 20px;
 
   &:hover {
     color: red;
@@ -50,10 +50,10 @@
   border-radius: 4px;
   border: 1px solid black;
   grid-area: image;
-  height: clamp(100px, 100%, 600px);
+  height: clamp(150px, 100%, 600px);
   object-fit: cover;
   padding: 15px;
-  width: clamp(300px, 100%, 450px);
+  width: clamp(375px, 100%, 450px);
 }
 
 .modal-attributes-container {
@@ -62,7 +62,7 @@
 
 .character-attribute-container {
   margin-bottom: 20px;
-  width: 350px;
+  width: 300px;
 }
 
 .character-attribute-title {
@@ -88,7 +88,7 @@
   }
 
   .modal-name {
-    font-size: clamp(10px, 5vw, 20px);
+    font-size: clamp(20px, 5vw, 40px);
   }
 
   .modal-character-container {
@@ -96,16 +96,28 @@
       'image'
       'attributes';
     justify-content: center;
-    gap: 20px;
+  }
+
+  .modal-attributes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .modal-image-container {
-    height: 300px;
     text-align: center;
   }
 
   .modal-image {
-    height: clamp(300px, 100%, 200px);
-    width: clamp(250px, 100%, 150px);
+    height: clamp(100px, 50vh, 550px);
+    width: clamp(150px, 65vw, 450px);
+  }
+
+  .character-attribute-title {
+    font-size: clamp(20px, 3vw, 45px);
+  }
+
+  .character-attribute-value {
+    font-size: clamp(20px, 2.5vw, 35px);
   }
 }
