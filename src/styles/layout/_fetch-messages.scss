@@ -6,6 +6,13 @@
 }
 
 .fetch-message-icon {
-  color: green;
   font-size: clamp(100px, 30vw, 200px);
+}
+
+.icon-green {
+  color: darkgreen;
+}
+
+.icon-yellow {
+  color: yellow;
 }

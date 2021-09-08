@@ -33,11 +33,11 @@ export const BCSScreen = () => {
       />
       <SearchBar isBcs={true} handleSearch={handleSearch} />
       {loading ? (
-        <Loading />
+        <Loading isBCS={true} />
       ) : ok ? (
         <CharacterGrid data={data} />
       ) : (
-        <FatalError />
+        <FatalError isBcs={true} />
       )}
       <Footer />
       <CharacterModal />

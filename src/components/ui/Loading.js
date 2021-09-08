@@ -7,7 +7,7 @@ export const Loading = ({ isBCS }) => {
   if (!isBCS) {
     color = '#369457';
   } else {
-    color = '#8B0000';
+    color = '#FFFF00';
   }
 
   return (
