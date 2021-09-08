@@ -17,7 +17,7 @@ body {
 
 .background-bcs-red {
   @include main-screen-background-properties(
-    darken($color: v.$bcs-red, $amount: 10)
+    darken($color: v.$bcs-red, $amount: 18)
   );
 }
 

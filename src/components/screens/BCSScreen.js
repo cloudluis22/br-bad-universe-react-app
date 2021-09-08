@@ -1,6 +1,12 @@
 import React from 'react';
 
 import { useFetchData } from '../../hooks/useFetchData';
+import { CharacterModal } from '../characters/CharacterModal';
+import { SearchBar } from '../ui/SearchBar';
+import { Loading } from '../ui/Loading';
+import { CharacterGrid } from '../characters/CharacterGrid';
+import { Footer } from '../ui/Footer';
+import { FatalError } from '../ui/FatalError';
 
 import bcsFullSizeImg from '../../images/bcs-screen-full.png';
 import bcsMobileSizeImg from '../../images/bcs-screen-mobile.png';
@@ -10,7 +16,7 @@ export const BCSScreen = () => {
     setSearch(value);
   };
 
-  const { dataState, setSearch } = useFetchData(false);
+  const { dataState, setSearch } = useFetchData(true);
   const { data, loading, ok } = dataState;
 
   return (
@@ -25,6 +31,16 @@ export const BCSScreen = () => {
         alt='Better Call Saul Mobile Logo'
         className='bcs-logo-mobile'
       />
+      <SearchBar isBcs={true} handleSearch={handleSearch} />
+      {loading ? (
+        <Loading />
+      ) : ok ? (
+        <CharacterGrid data={data} />
+      ) : (
+        <FatalError />
+      )}
+      <Footer />
+      <CharacterModal />
     </div>
   );
 };

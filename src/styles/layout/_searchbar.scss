@@ -68,3 +68,7 @@
 .search-color-red {
   background-color: darken($color: v.$bcs-red, $amount: 10);
 }
+
+.search-color-yellow {
+  background-color: hsl(56, 80, 50);
+}

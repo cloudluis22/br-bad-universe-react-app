@@ -15,8 +15,8 @@
   text-align: center;
 }
 
-// Breaking Bad logo mixin.
-@mixin brba-logo-props($margin-bottom, $padding-top) {
+// Shows logo mixin.
+@mixin show-logo-props($margin-bottom, $padding-top) {
   display: block;
   margin-left: auto;
   margin-right: auto;

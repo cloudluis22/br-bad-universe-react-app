@@ -1,0 +1,24 @@
+@import '../abstracts/mixins';
+
+.bcs-logo-full {
+  @include show-logo-props(40px, 15px);
+  width: clamp(450px, 60vw, 700px);
+  object-fit: cover;
+  height: 370px;
+}
+
+.bcs-logo-mobile {
+  @include show-logo-props(30px, 20px);
+  width: clamp(150px, 18vw, 300px);
+  display: none;
+}
+
+@media only screen and (max-width: 650px) {
+  .bcs-logo-full {
+    display: none;
+  }
+
+  .bcs-logo-mobile {
+    display: block;
+  }
+}

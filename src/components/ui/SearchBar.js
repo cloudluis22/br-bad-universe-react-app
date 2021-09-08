@@ -8,7 +8,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { useForm } from '../../hooks/useForm';
 
-export const SearchBar = ({ bcs, handleSearch }) => {
+export const SearchBar = ({ isBcs, handleSearch }) => {
   const [searchValue, handleInputChange, reset] = useForm({
     search: '',
   });
@@ -70,7 +70,9 @@ export const SearchBar = ({ bcs, handleSearch }) => {
             -----------------------------------------------------------------------------------
             By default it uses the Breaking Bad design unless specified.
           */
-          bcs ? 'search-btn search-color-red' : 'search-btn search-color-green'
+          isBcs
+            ? 'search-btn search-color-yellow'
+            : 'search-btn search-color-green'
         }>
         <FontAwesomeIcon icon={faSearch} />
       </button>

@@ -1,12 +1,12 @@
 @import '../abstracts/mixins';
 
 .brba-logo-full {
-  @include brba-logo-props(60px, 30px);
+  @include show-logo-props(60px, 30px);
   width: clamp(450px, 30vw, 500px);
 }
 
 .brba-logo-mobile {
-  @include brba-logo-props(20px, 10px);
+  @include show-logo-props(20px, 10px);
   width: clamp(150px, 18vw, 300px);
   display: none;
 }
