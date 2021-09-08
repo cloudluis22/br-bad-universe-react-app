@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { CharacterCard } from './CharacterCard';
 import { NotFound } from '../ui/NotFound';
 
-export const CharacterGrid = ({ data }) => {
+export const CharacterGrid = React.memo(({ data }) => {
   if (data.length > 0) {
     return (
       <div className='character-grid'>
@@ -28,7 +28,7 @@ export const CharacterGrid = ({ data }) => {
   } else {
     return <NotFound />;
   }
-};
+});
 
 CharacterGrid.propTypes = {
   data: PropTypes.array.isRequired,
