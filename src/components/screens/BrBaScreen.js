@@ -7,6 +7,7 @@ import { Loading } from '../ui/Loading';
 import { CharacterGrid } from '../characters/CharacterGrid';
 import { Footer } from '../ui/Footer';
 import { FatalError } from '../ui/FatalError';
+import { SwitchPage } from '../ui/SwitchPage';
 
 import brbaFullSizeImg from '../../images/brba-screen-full.png';
 import brbaMobileSizeImg from '../../images/brba-screen-mobile.png';
@@ -21,6 +22,7 @@ export const BrBaScreen = () => {
 
   return (
     <div className='background-brba-green'>
+      <SwitchPage />
       <img
         src={brbaFullSizeImg}
         alt='Breaking Bad Full Logo'

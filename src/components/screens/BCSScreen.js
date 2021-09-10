@@ -7,6 +7,7 @@ import { Loading } from '../ui/Loading';
 import { CharacterGrid } from '../characters/CharacterGrid';
 import { Footer } from '../ui/Footer';
 import { FatalError } from '../ui/FatalError';
+import { SwitchPage } from '../ui/SwitchPage';
 
 import bcsFullSizeImg from '../../images/bcs-screen-full.png';
 import bcsMobileSizeImg from '../../images/bcs-screen-mobile.png';
@@ -21,6 +22,7 @@ export const BCSScreen = () => {
 
   return (
     <div className='background-bcs-red'>
+      <SwitchPage isBcs />
       <img
         src={bcsFullSizeImg}
         alt='Better Call Saul Full Logo'
