@@ -12,14 +12,13 @@ export const BreakingBadDB = () => {
     isOpen: false,
     character: {
       /*
-        El valor de "occupation" se deja como un arreglo vacío
-        ya que la ventana modal va a tratar de utilizar el método ".map"
-        de el arreglo de las ocupaciones de el personaje aunque no haya
-        uno seleccionado.
-        -----------------------------------------------------------------
-        The "occupation" value it's declared as an empty array since the
-        beginning because the modal window will try to use the ".map" method
-        of the character's occupations array even if there is none selected.
+        Los valores "occupation" y "appearance" se declaran como arreglos
+        vacíos desde el inicio porqué al inicializarse la app se utilizan
+        inmediatamente algunos métodos de arreglos incluso si están vacíos.
+        ------------------------------------------------------------------
+        The values "occupation" and "appearance" are declared as arrays
+        from the beginning because when initializing the app, some array
+        methods are instantly used even if they are empty.
       */
       occupation: [],
       appearance: [],
