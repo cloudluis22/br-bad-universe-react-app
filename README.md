@@ -1,70 +1,74 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Breaking Bad Universe Database v. 1.0 ⚛️
 
-## Available Scripts
+![GitHub package.json version](https://img.shields.io/github/package-json/v/cloudluis22/br-bad-universe-react-app?color=success&logo=files&logoColor=white&style=flat-square)
+![GitHub repo size](https://img.shields.io/github/repo-size/cloudluis22/br-bad-universe-react-app?logo=GitHub&style=flat-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/cloudluis22/br-bad-universe-react-app?style=flat-square)
+![GitHub top language](https://img.shields.io/github/languages/top/cloudluis22/br-bad-universe-react-app?logo=javascript&style=flat-square)
+![GitHub](https://img.shields.io/github/license/cloudluis22/br-bad-universe-react-app?style=flat-square)
 
-In the project directory, you can run:
+**NOTA: Para ver una versión de este archivo en español, por favor mira el archivo README-es.**
 
-### `npm start`
+This is the Breaking Bad Universe Database, a webapp made with React alongside SASS for sheet styling using **[The Breaking Bad API](https://breakingbadapi.com)**.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This application allows users to search for their favorite Breaking Bad and Better Call Saul characters and read a small
+summary about them displayed in cards.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Currently, this application is in it's first release v. 1.0, and therefore, I'm looking forward to [adding more features](#future-changes-and-improvements-to-the-application).
 
-### `npm test`
+## Running this project in your machine 💻
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Although there is the GitHub pages deploy of this application, if you wish to run it locally on your machine for whatever purpose you want, you can do it.
 
-### `npm run build`
+    # Clone this repository.
+    $ git clone https://github.com/cloudluis22/br-bad-universe-react-app.git
+    $ cd br-bad-universe-react-app
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Afterwards, you should reinstall all the node modules and you will be ready to go.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    # Reinstalling modules.
+    $ npm install
+    # running the project.
+    $ npm start
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This project is made with [Create React App](https://create-react-app.dev), so you have full access to all the scripts and everything it includes with it.
 
-### `npm run eject`
+## Usage ⚙️
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![Main Screen](https://user-images.githubusercontent.com/70856719/132925413-bf750340-9a93-4d36-bdf8-a9fec5276433.PNG)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The default route of the application is the main screen, here you can choose between the two shows.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+The footer displayed below always remains there and you can see some links for my GitHub profile, the repo link of this project as well as a link for the API webpage.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![Page Example](https://user-images.githubusercontent.com/70856719/132925714-8eebccc9-7891-4181-826e-a934e2341d7e.PNG)
 
-## Learn More
+In any of the both shows you will get an interface like this one, on the top of the page is the logo of the selected show and below it the search bar, you can look up for any character
+that makes an apparition on that particular series *(Better Call Saul includes re-apparitions)*. If you make a search, you can press the reset button that will appear beside the bar to
+bring back all characters again.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/70856719/132926283-96a86f17-d03c-407a-8985-a2fc518ac1cc.PNG" >
+</p>
+Pressing on any characters card will pop-up a little window with some information about it, such as the actor/actress who portrays that role, birthday, nicknames and other stuff, you can exit
+the window by using the cross or just pressing outside of the window.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+If you want to switch to the other show, just use the arrow at the top-right of the page.
 
-### Code Splitting
+The responsive design for this project is currently not the best yet, but will continue to improve within the next releases of this application.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/70856719/132927859-034eb61f-bfa4-4893-8ab1-3807508f9f21.png" width="350" height="350">
+    <img src="https://user-images.githubusercontent.com/70856719/132927889-58dd1646-7522-4a40-9ed9-d32054308f89.png" width="200" height="250">
+    <img src="https://user-images.githubusercontent.com/70856719/132928233-ec478c29-7645-4094-a8be-3cc9000f283a.png" width="100" height="150">
+<p/>
 
-### Analyzing the Bundle Size
+## Future changes and improvements to the application 💫
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Starting from version 1.0, these are a list of other features and fixes I want to do to the application.
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [ ] Add a dark mode to the modals.
+- [ ] Adding a navigation bar.
+- [ ] Improved styling.
+- [ ] Add Random Deaths screen.
+- [ ] Add Random Quotes screen.
