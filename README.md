@@ -14,7 +14,7 @@ This is the Breaking Bad Universe Database, a webapp made with React alongside S
 This application allows users to search for their favorite Breaking Bad and Better Call Saul characters and read a small
 summary about them displayed in cards.
 
-Currently, this application is in it's first release v. 1.0, and therefore, I'm looking forward to [adding more features](#future-changes-and-improvements-to-the-application).
+Currently, this application is in it's first release v. 1.0, and therefore, I'm looking forward to [adding more features](#future-changes-and-improvements-to-the-application-💫).
 
 ## Running this project in your machine 💻
 
@@ -28,7 +28,7 @@ Afterwards, you should reinstall all the node modules and you will be ready to g
 
     # Reinstalling modules.
     $ npm install
-    # running the project.
+    # Running the project.
     $ npm start
 
 This project is made with [Create React App](https://create-react-app.dev), so you have full access to all the scripts and everything it includes with it.
@@ -39,7 +39,7 @@ This project is made with [Create React App](https://create-react-app.dev), so y
 
 The default route of the application is the main screen, here you can choose between the two shows.
 
-The footer displayed below always remains there and you can see some links for my GitHub profile, the repo link of this project as well as a link for the API webpage.
+The footer displayed below always remains there and you can see some links for my GitHub profile, this repo as well as a link for the API webpage.
 
 ![Page Example](https://user-images.githubusercontent.com/70856719/132925714-8eebccc9-7891-4181-826e-a934e2341d7e.PNG)
 
@@ -50,8 +50,9 @@ bring back all characters again.
 <p align="center">
     <img src="https://user-images.githubusercontent.com/70856719/132926283-96a86f17-d03c-407a-8985-a2fc518ac1cc.PNG" >
 </p>
-Pressing on any characters card will pop-up a little window with some information about it, such as the actor/actress who portrays that role, birthday, nicknames and other stuff, you can exit
-the window by using the cross or just pressing outside of the window.
+
+Pressing on any characters card will pop-up a little window with some information about it, such as the actor/actress who portrays that role, birthday, nicknames and other stuff. You can exit
+the window by using the cross in the top-right corner of the window or just pressing outside of it.
 
 If you want to switch to the other show, just use the arrow at the top-right of the page.
 
@@ -65,10 +66,10 @@ The responsive design for this project is currently not the best yet, but will c
 
 ## Future changes and improvements to the application 💫
 
-Starting from version 1.0, these are a list of other features and fixes I want to do to the application.
+Starting from version 1.0, this is a list of other features and fixes I want to do to the application.
 
 - [ ] Add a dark mode to the modals.
 - [ ] Adding a navigation bar.
 - [ ] Improved styling.
-- [ ] Add Random Deaths screen.
-- [ ] Add Random Quotes screen.
+- [ ] Add Random Deaths screen from the API functionality.
+- [ ] Add Random Quotes screen from the API functionality.
