@@ -7,7 +7,7 @@
 ![GitHub top language](https://img.shields.io/github/languages/top/cloudluis22/br-bad-universe-react-app?logo=javascript&style=flat-square)
 ![GitHub](https://img.shields.io/github/license/cloudluis22/br-bad-universe-react-app?style=flat-square)
 
-**NOTA: Para ver una versión de este archivo en español, por favor mira el archivo README-es.**
+**NOTA: Para ver una versión de este archivo en español, por favor mira el archivo [README-es.md](https://github.com/cloudluis22/br-bad-universe-react-app/blob/main/README-es.md)**.
 
 This is the Breaking Bad Universe Database, a webapp made with React alongside SASS for sheet styling using **[The Breaking Bad API](https://breakingbadapi.com)**.
 
